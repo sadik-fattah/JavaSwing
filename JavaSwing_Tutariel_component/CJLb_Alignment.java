@@ -9,7 +9,7 @@ public class CJLb_Alignment {
         f.setSize(300, 200);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JLabel label= new JLabel("java2s.com");
+        JLabel label= new JLabel("https://guercifzone-ar.blogspot.com/");
         Border border = BorderFactory.createLineBorder(Color.BLACK);
         label.setBorder(border);
         label.setPreferredSize(new Dimension(150, 100));
