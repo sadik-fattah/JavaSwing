@@ -1,18 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
-/*
 
-public class CJpnl_Unicode  {
-    public static void main(String []args) {
-        CJpnl_Unicode cJpnlUnicode = new CJpnl_Unicode();
-        cJpnlUnicode.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        cJpnlUnicode.setSize(350, 250);
-        cJpnlUnicode.setVisible(true);
-    }
 
-}
-class ff extends JFrame {
-    public void CJpnl_Unicode() {
+class CJpnl_Unicode extends JFrame {
+    public CJpnl_Unicode() {
         super("Demonstrating Unicode");
 
         setLayout(new GridLayout(8, 1));
@@ -56,4 +47,4 @@ class ff extends JFrame {
         spanishJLabel.setToolTipText("This is Spanish");
         add(spanishJLabel);
     }
-}*/
+}
