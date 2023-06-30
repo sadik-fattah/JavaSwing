@@ -8,17 +8,23 @@ public class CJLb {
         f.setSize(300, 200);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JLabel label4= new JLabel("java2s.com");
-        label4.setEnabled(false);
-        JLabel label3 = new JLabel("First Name");
-        label3.setFont(new Font("Courier New", Font.ITALIC, 18));
-        label3.setForeground(Color.RED);
-        ImageIcon imageIcon = new ImageIcon("icon.gif");
+        ImageIcon imageIcon = new ImageIcon("testing.gif");
+
+        JLabel label= new JLabel("GUERCIFZONE-AR.BLOGSPOT.COM");
+        JLabel label1 = new JLabel("<html>firstLine <br> nextLine</html>");
         JLabel label2 = new JLabel(imageIcon);
-        JLabel label1 = new JLabel("<html>bold <br> plain</html>");
+        JLabel label3 = new JLabel("J@k!NZ0");
+        JLabel label4= new JLabel("GUERCIFZONE");
+
+        label4.setEnabled(false);
+        label3.setFont(new Font("Courier New", Font.ITALIC, 18));
+
+        f.add(label4);
+        f.add(label3);
+        f.add(label2);
         f.add(label1);
-        JLabel label= new JLabel("java2s.com");
         f.add(label);
+        f.pack();
         f.setVisible(true);
     }
 }
