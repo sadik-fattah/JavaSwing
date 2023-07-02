@@ -1,7 +1,10 @@
 import javax.swing.*;
 import javax.swing.event.*;
+class JSpinner_S extends JFrame{
 
-class JSpinner_S extends JFrame implements ChangeListener {
+}
+/*
+class JSpinner_S extends JFrame implements ChangeListener {/*
     // frame
     static JFrame f;
 
@@ -82,4 +85,4 @@ class JSpinner_S extends JFrame implements ChangeListener {
     {
         l1.setText(s1.getValue() + " " + s2.getValue() + " " + s.getValue());
     }
-}
+}*/

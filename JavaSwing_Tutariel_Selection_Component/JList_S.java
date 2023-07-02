@@ -1,7 +1,6 @@
 import javax.swing.*;
 
-public class JList_S extends JFrame
-{
+public class JList_S extends JFrame {/*
     private JList_S<String> langages;
 
     public JList_S()
@@ -37,5 +36,5 @@ public class JList_S extends JFrame
                 new JList_S();
             }
         });
-    }
+    }*/
 }
