@@ -1,14 +1,13 @@
 import javax.swing.*;
-import javax.swing.event.ChangeListener;
 import java.awt.*;
 
-public class JRadioButton extends JFrame {
+public class JRadioButton_ extends JFrame {
     ButtonGroup genderGroup = new ButtonGroup();
     JRadioButton genderMale = new JRadioButton("Male");
     JRadioButton genderFemale = new JRadioButton("Female");
     JRadioButton genderUnknown = new JRadioButton("Unknown");
 
-    public JRadioButton() {
+    public JRadioButton_() {
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         genderGroup.add(genderMale);
@@ -25,10 +24,9 @@ public class JRadioButton extends JFrame {
     }
 
     public static void main(String[] args) {
-        JRadioButton bf = new JRadioButton();
+        JRadioButton_ bf = new JRadioButton_();
         bf.pack();
         bf.setVisible(true);
     }
-
 
 }
