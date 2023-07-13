@@ -2,8 +2,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class JList_S{
-    JList_S(){
+public class Jlist_{
+    Jlist_(){
         JFrame f= new JFrame();
         final JLabel label = new JLabel();
         label.setSize(500,100);
@@ -46,6 +46,6 @@ public class JList_S{
     }
     public static void main(String args[])
     {
-        new JList_S();
+        new Jlist_();
     }
 }

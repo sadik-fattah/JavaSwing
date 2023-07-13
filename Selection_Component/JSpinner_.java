@@ -1,7 +1,11 @@
 import javax.swing.*;
-import javax.swing.event.*;
-class JSpinner_S extends JFrame{
- public static void main(String[] args) {
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+public class JSpinner_ extends JFrame {
+
+
+    public static void main(String[] args) {
 
             JFrame f=new JFrame("Spinner Example");
             final JLabel label = new JLabel();
@@ -20,8 +24,9 @@ class JSpinner_S extends JFrame{
             f.setVisible(true);
             spinner.addChangeListener(new ChangeListener() {
                 public void stateChanged(ChangeEvent e) {
-                    label.setText("القيمة : " + ((JSpinner)e.getSource()).getValue());
+                    label.setText("Value : " + ((JSpinner)e.getSource()).getValue());
                 }
             });
         }
-}
+    }
+
