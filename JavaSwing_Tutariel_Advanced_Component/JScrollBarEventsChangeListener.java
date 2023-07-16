@@ -3,33 +3,32 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
 
+class ScrollBarSample implements ChangeListener{
 
-class  ScrollBarSample  implements ChangeListener {
     public void stateChanged(ChangeEvent changeEvent) {
         Object source = changeEvent.getSource();
-        if (source instanceof BoundedRangeModel) {
-            BoundedRangeModel aModel = (BoundedRangeModel) source;
-            if (!aModel.getValueIsAdjusting()) {
-                System.out.println("Changed: " + aModel.getValue());
-            }
-        } else {
-            System.out.println("Something changed: " + source);
+        if (source instanceof BoundedRangeModel){
+            BoundedRangeModel amodel = (BoundedRangeModel) source;
+       if (!amodel.getValueIsAdjusting()){
+           System.out.println("changed: " +amodel.getValue());
+       }
+        }else {
+            System.out.println("Somthing change : " +source);
         }
+
     }
 }
-
 public class JScrollBarEventsChangeListener {
     public static void main(String args[]) {
-        ChangeListener changeListener = (ChangeListener) new ScrollBarSample();
-        JScrollBar aJScrollBar = new JScrollBar(JScrollBar.HORIZONTAL);
-        BoundedRangeModel model = aJScrollBar.getModel();
+        ChangeListener changeListener =(ChangeListener)new ScrollBarSample();
+        JScrollBar jScrollBar = new JScrollBar(JScrollBar.HORIZONTAL);
+        BoundedRangeModel model = jScrollBar.getModel();
         model.addChangeListener(changeListener);
-
-        JFrame frame = new JFrame("ScrollBars R Us");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(aJScrollBar, BorderLayout.NORTH);
-        frame.setSize(300, 200);
-        frame.setVisible(true);
+        JFrame f = new JFrame("ScrollBars R Us");
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.add(jScrollBar, BorderLayout.NORTH);
+        f.setSize(300, 200);
+        f.setVisible(true);
     }
 }
 

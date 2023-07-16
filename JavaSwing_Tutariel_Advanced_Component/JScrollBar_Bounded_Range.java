@@ -6,17 +6,18 @@ import java.awt.event.AdjustmentListener;
 public class JScrollBar_Bounded_Range {
     public static void main(String args[]) {
         AdjustmentListener adjustmentListener = new AdjustmentListener() {
+
             public void adjustmentValueChanged(AdjustmentEvent adjustmentEvent) {
-                System.out.println("Adjusted: " + adjustmentEvent.getValue());
+               System.out.println("Adjusted"+ adjustmentEvent.getValue());
             }
         };
-        JScrollBar oneJScrollBar = new JScrollBar(JScrollBar.HORIZONTAL);
-        oneJScrollBar.addAdjustmentListener(adjustmentListener);
+        JScrollBar jScrollBarone = new JScrollBar(JScrollBar.HORIZONTAL);
+        jScrollBarone.addAdjustmentListener(adjustmentListener);
 
-        JFrame frame = new JFrame("ScrollBars R Us");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.add(oneJScrollBar, BorderLayout.NORTH);
-        frame.setSize(300, 200);
-        frame.setVisible(true);
+        JFrame f = new JFrame("ScrollBars R Us");
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.add(jScrollBarone, BorderLayout.NORTH);
+        f.setSize(300, 200);
+        f.setVisible(true);
     }
 }
