@@ -2,10 +2,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-/*
-public class JScrollPane_Viewport_Position implements ActionListener {
+
+class JScrollPaneToTopAction implements ActionListener {
     JScrollPane scrollPane;
-    public JScrollPane_(JScrollPane scrollPane) {
+    public JScrollPaneToTopAction(JScrollPane scrollPane) {
         if (scrollPane == null) {
             throw new IllegalArgumentException(
                     "JScrollPaneToTopAction: null JScrollPane");
@@ -19,8 +19,6 @@ public class JScrollPane_Viewport_Position implements ActionListener {
         horizontalScrollBar.setValue(horizontalScrollBar.getMinimum());
     }
 }
-
-
 public class JScrollPane_Viewport_Position {
 
     public static void main(String args[]) {
@@ -33,11 +31,14 @@ public class JScrollPane_Viewport_Position {
 
         JButton bn = new JButton("Move");
 
-        bn.addActionListener(new JScrollPane_Viewport_Position(jScrollPane));
+        bn.addActionListener(new JScrollPaneToTopAction(jScrollPane));
 
         frame.add(bn, BorderLayout.SOUTH);
         frame.add(jScrollPane, BorderLayout.CENTER);
         frame.setSize(400, 150);
         frame.setVisible(true);
     }
-}*/
+}
+
+
+
