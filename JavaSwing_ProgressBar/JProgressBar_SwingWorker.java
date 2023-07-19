@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.util.Random;
-/*
+
 public class JProgressBar_SwingWorker extends JPanel implements ActionListener,
         PropertyChangeListener {
 
@@ -45,7 +45,7 @@ public class JProgressBar_SwingWorker extends JPanel implements ActionListener,
         }
     }
 
-    public ProgressBarDemo() {
+    public JProgressBar_SwingWorker() {
         super(new BorderLayout());
 
         // Create the demo's UI.
@@ -99,7 +99,7 @@ public class JProgressBar_SwingWorker extends JPanel implements ActionListener,
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
-        JComponent newContentPane = new ProgressBarDemo();
+        JComponent newContentPane = new JProgressBar_SwingWorker();
         newContentPane.setOpaque(true);
         frame.setContentPane(newContentPane);
 
@@ -117,4 +117,3 @@ public class JProgressBar_SwingWorker extends JPanel implements ActionListener,
         });
     }
 }
-*/
