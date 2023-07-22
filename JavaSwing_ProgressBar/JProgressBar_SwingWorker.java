@@ -6,9 +6,8 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.util.Random;
 
-public class JProgressBar_SwingWorker extends JPanel implements ActionListener,
-        PropertyChangeListener {
 
+public class JProgressBar_SwingWorker extends JPanel implements ActionListener, PropertyChangeListener {
     private JProgressBar progressBar;
     private JButton startButton;
     private JTextArea taskOutput;
@@ -44,7 +43,6 @@ public class JProgressBar_SwingWorker extends JPanel implements ActionListener,
             taskOutput.append("Done!\n");
         }
     }
-
     public JProgressBar_SwingWorker() {
         super(new BorderLayout());
 
@@ -70,8 +68,6 @@ public class JProgressBar_SwingWorker extends JPanel implements ActionListener,
         setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
     }
-
-
     public void actionPerformed(ActionEvent evt) {
         startButton.setEnabled(false);
         setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
@@ -81,8 +77,6 @@ public class JProgressBar_SwingWorker extends JPanel implements ActionListener,
         task.addPropertyChangeListener(this);
         task.execute();
     }
-
-
     public void propertyChange(PropertyChangeEvent evt) {
         if ("progress" == evt.getPropertyName()) {
             int progress = (Integer) evt.getNewValue();
@@ -91,8 +85,6 @@ public class JProgressBar_SwingWorker extends JPanel implements ActionListener,
                     .getProgress()));
         }
     }
-
-
     private static void createAndShowGUI() {
 
         JFrame frame = new JFrame("ProgressBarDemo");
@@ -107,7 +99,6 @@ public class JProgressBar_SwingWorker extends JPanel implements ActionListener,
         frame.pack();
         frame.setVisible(true);
     }
-
     public static void main(String[] args) {
 
         javax.swing.SwingUtilities.invokeLater(new Runnable() {

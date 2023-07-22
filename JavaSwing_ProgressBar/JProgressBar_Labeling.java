@@ -30,7 +30,8 @@ public class JProgressBar_Labeling {
     public static void main(String args[]) {
         JFrame frame = new JFrame("Stepping Progress");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        final JProgressBar aJProgressBar = new JProgressBar(0, 50);
+        //final JProgressBar aJProgressBar = new JProgressBar(JProgressBar.HORIZONTAL);
+        final JProgressBar aJProgressBar = new JProgressBar(0,50);
         aJProgressBar.setStringPainted(true);
 
         final JButton aJButton = new JButton("Start");

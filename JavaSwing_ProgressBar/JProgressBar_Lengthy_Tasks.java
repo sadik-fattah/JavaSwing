@@ -1,44 +1,42 @@
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JProgressBar;
-import javax.swing.Timer;
-//A progress bar is used for lengthy tasks.
+import javax.swing.*;
+
 public class JProgressBar_Lengthy_Tasks {
     public static void main(String[] args) {
-        final Timer timer;
-        final JProgressBar progressBar = new JProgressBar();
-        final JButton button = new JButton("Start");
+       final Timer timer;
+       final JProgressBar progressBar =new JProgressBar();
+       final JButton btn = new JButton("Start");
+
         JFrame f = new JFrame();
         f.setLayout(new FlowLayout());
-        f.add(progressBar);
-        f.add(button);
-
-        ActionListener updateProBar = new ActionListener() {
+ f.add(progressBar);
+ f.add(btn);
+        ActionListener updatBar = new ActionListener() {
             public void actionPerformed(ActionEvent actionEvent) {
-                int val = progressBar.getValue();
-                if (val >= 100) {
-                    //  timer.stop();
-                    button.setText("End");
-                    return;
-                }
-                progressBar.setValue(++val);
+               int val = progressBar.getValue();
+               if (val >100){
+                  // timer.stop();
+                   btn.setText("End");
+                   return;
+               }
+               progressBar.setValue(++val);
             }
         };
-        timer = new Timer(50, updateProBar);
-        button.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                if (timer.isRunning()) {
-                    timer.stop();
-                    button.setText("Start");
-                } else if (button.getText() != "End") {
-                    timer.start();
-                    button.setText("Stop");
-                }
-            }
-        });
+timer = new Timer(50,updatBar);
+btn.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent actionEvent) {
+        if (timer.isRunning()){
+            timer.stop();
+            btn.setText("Start");
+        }else if (btn.getText()!="End"){
+          timer.start();
+          btn.setText("stop");
+        }
+    }
+});
+
         f.pack();
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setResizable(false);
