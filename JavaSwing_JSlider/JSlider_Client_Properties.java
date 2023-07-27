@@ -3,18 +3,17 @@ import java.awt.*;
 
 public class JSlider_Client_Properties {
     public static void main(String args[]) {
-        JFrame frame = new JFrame("Tick Slider");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JFrame f = new JFrame("Tick Slider");
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JSlider oneJSlider = new JSlider();
-        oneJSlider.putClientProperty("JSlider.isFilled", Boolean.TRUE);
-        JSlider anotherJSlider = new JSlider();
-        // Set to default setting
-        anotherJSlider.putClientProperty("JSlider.isFilled", Boolean.FALSE);
+        JSlider jSlider1 = new JSlider();
+        jSlider1.putClientProperty("jslider.isfilled" , Boolean.TRUE);
+        JSlider jSlider2 = new JSlider();
+        jSlider2.putClientProperty("jslider.isfilled" , Boolean.FALSE);
 
-        frame.add(oneJSlider, BorderLayout.NORTH);
-        frame.add(anotherJSlider, BorderLayout.SOUTH);
-        frame.setSize(300, 200);
-        frame.setVisible(true);
+        f.add(jSlider1,BorderLayout.NORTH);
+        f.add(jSlider2,BorderLayout.SOUTH);
+        f.setSize(300, 200);
+        f.setVisible(true);
     }
 }

@@ -7,7 +7,7 @@ public class JSlider_Control_Color extends JFrame {
     public JSlider_Control_Color() {
         getContentPane().add(new TColor());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(500, 500);
+        setSize(500, 700);
         setVisible(true);
     }
 
@@ -15,12 +15,11 @@ public class JSlider_Control_Color extends JFrame {
         new JSlider_Control_Color();
     }
 }
-class TColor extends JPanel {
+class TColor extends JPanel{
     DrawingCanvas canvas = new DrawingCanvas();
     JLabel rgbValue = new JLabel("");
 
-    JSlider sliderR, sliderG, sliderB, sliderH, sliderS, sliderBr,
-            sliderAlpha;
+    JSlider sliderR, sliderG, sliderB, sliderH, sliderS, sliderBr, sliderAlpha;
 
     public TColor() {
         sliderR = getSlider(0, 255, 0, 50, 5);
@@ -55,8 +54,8 @@ class TColor extends JPanel {
 
         add(panel, BorderLayout.SOUTH);
         add(canvas);
-    }
 
+    }
     public JSlider getSlider(int min, int max, int init, int mjrTkSp, int mnrTkSp) {
         JSlider slider = new JSlider(JSlider.HORIZONTAL, min, max, init);
         slider.setPaintTicks(true);
@@ -66,7 +65,6 @@ class TColor extends JPanel {
         slider.addChangeListener(new SliderListener());
         return slider;
     }
-
     class DrawingCanvas extends Canvas {
         Color color;
         int redValue, greenValue, blueValue;
@@ -84,60 +82,60 @@ class TColor extends JPanel {
             setBackground(color);
         }
     }
-
-    class SliderListener implements ChangeListener {
-        public void stateChanged(ChangeEvent e) {
-            JSlider slider = (JSlider) e.getSource();
-
-            if (slider == sliderAlpha) {
-                canvas.alphaValue = slider.getValue();
-                canvas.setBackgroundColor();
-            } else if (slider == sliderR) {
-                canvas.redValue = slider.getValue();
-                displayRGBColor();
-            } else if (slider == sliderG) {
-                canvas.greenValue = slider.getValue();
-                displayRGBColor();
-            } else if (slider == sliderB) {
-                canvas.blueValue = slider.getValue();
-                displayRGBColor();
-            } else if (slider == sliderH) {
-                canvas.hsbValues[0] = (float) (slider.getValue() * 0.1);
-                displayHSBColor();
-            } else if (slider == sliderS) {
-                canvas.hsbValues[1] = (float) (slider.getValue() * 0.1);
-                displayHSBColor();
-            } else if (slider == sliderBr) {
-                canvas.hsbValues[2] = (float) (slider.getValue() * 0.1);
-                displayHSBColor();
+        class SliderListener implements ChangeListener {
+            public void stateChanged(ChangeEvent chevt) {
+                JSlider slider = (JSlider)chevt.getSource();
+                if (slider == sliderAlpha){
+                    canvas.alphaValue =slider.getValue();
+                    canvas.setBackgroundColor();
+                } else if (slider == sliderR) {
+                    canvas.redValue = slider.getValue();
+                    displayRGBColor();
+                } else if (slider == sliderG) {
+                    canvas.greenValue = slider.getValue();
+                    displayRGBColor();
+                } else if (slider == sliderB) {
+                    canvas.blueValue = slider.getValue();
+                    displayRGBColor();
+                } else if (slider == sliderH) {
+                    canvas.hsbValues[0] = (float) (slider.getValue()*0.1);
+                    displayHSBColor();
+                } else if (slider == sliderS) {
+                    canvas.hsbValues[1]=(float) (slider.getValue()*0.1);
+                    displayHSBColor();
+                } else if (slider == sliderBr) {
+                    canvas.hsbValues[2]= (float) (slider.getValue()*0.1);
+                    displayHSBColor();
+                }
+                canvas.repaint();
             }
-            canvas.repaint();
+            public void displayHSBColor(){
+                canvas.color = Color.getHSBColor(canvas.hsbValues[0],
+                        canvas.hsbValues[1],
+                        canvas.hsbValues[2]);
+                canvas.redValue = canvas.color.getRed();
+                canvas.greenValue = canvas.color.getGreen();
+                canvas.blueValue = canvas.color.getBlue();
+
+                sliderR.setValue(canvas.redValue);
+               sliderG.setValue(canvas.greenValue);
+                sliderB.setValue(canvas.blueValue);
+
+                canvas.color = new Color(canvas.redValue,
+                        canvas.greenValue,
+                        canvas.blueValue,
+                        canvas.alphaValue);
+                canvas.setBackground(canvas.color);
+            }
+            public void displayRGBColor(){
+                canvas.setBackgroundColor();
+                Color.RGBtoHSB(canvas.redValue,canvas.greenValue,canvas.blueValue,canvas.hsbValues);
+                sliderH.setValue((int)(canvas.hsbValues[0]*10));
+                sliderS.setValue((int)(canvas.hsbValues[1]*10));
+                sliderBr.setValue((int)(canvas.hsbValues[2]*10));
+
+                rgbValue.setText(Integer.toString(canvas.color.getRGB() & 0xffffff,16));
+            }
+        }
         }
 
-        public void displayRGBColor() {
-            canvas.setBackgroundColor();
-            Color.RGBtoHSB(canvas.redValue, canvas.greenValue, canvas.blueValue,canvas.hsbValues);
-            sliderH.setValue((int) (canvas.hsbValues[0] * 10));
-            sliderS.setValue((int) (canvas.hsbValues[1] * 10));
-            sliderBr.setValue((int) (canvas.hsbValues[2] * 10));
-
-            rgbValue.setText(Integer.toString(canvas.color.getRGB() & 0xffffff, 16));
-        }
-
-        public void displayHSBColor() {
-            canvas.color = Color.getHSBColor(canvas.hsbValues[0],
-                    canvas.hsbValues[1], canvas.hsbValues[2]);
-            canvas.redValue = canvas.color.getRed();
-            canvas.greenValue = canvas.color.getGreen();
-            canvas.blueValue = canvas.color.getBlue();
-
-            sliderR.setValue(canvas.redValue);
-            sliderG.setValue(canvas.greenValue);
-            sliderB.setValue(canvas.blueValue);
-
-            canvas.color = new Color(canvas.redValue, canvas.greenValue,
-                    canvas.blueValue, canvas.alphaValue);
-            canvas.setBackground(canvas.color);
-        }
-    }
-}
