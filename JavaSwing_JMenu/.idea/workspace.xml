@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2eeff62a-b782-4a20-9774-b3f7b6bbf0c1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/JMenu_Action_Objects.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JMenu_AddSparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JMenu_Events_ChangeListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JMenu_Layout_Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JMenu_LookDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JMenu_MenuListener_Listen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JMenu_Mnemonic_key.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JMenu_Shortcuts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JMenu_Submenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JMenu_Window.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2T9JNKcOmgEx1cv40CamGtLSAQ5" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2eeff62a-b782-4a20-9774-b3f7b6bbf0c1" name="Changes" comment="" />
+      <created>1690449327241</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690449327241</updated>
+    </task>
+    <servers />
+  </component>
+</project>
