@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 
-public class Menu_LookDemo {
+public class JMenu_how_Look {
     JTextArea output;
     JScrollPane scrollPane;
 
@@ -108,7 +108,7 @@ public class Menu_LookDemo {
     }
 
     protected static ImageIcon createImageIcon(String path) {
-        java.net.URL imgURL = Menu_LookDemo.class.getResource(path);
+        java.net.URL imgURL = JMenu_how_Look.class.getResource(path);
         if (imgURL != null) {
             return new ImageIcon(imgURL);
         } else {
@@ -124,7 +124,7 @@ public class Menu_LookDemo {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
-        Menu_LookDemo demo = new Menu_LookDemo();
+        JMenu_how_Look demo = new JMenu_how_Look();
         frame.setJMenuBar(demo.createMenuBar());
         frame.setContentPane(demo.createContentPane());
 

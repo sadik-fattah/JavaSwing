@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
-/*
+
 class ShowAction extends AbstractAction {
     Component parentComponent;
 
@@ -41,4 +41,4 @@ public class JMenu_Action_Objects {
         frame.setSize(350, 250);
         frame.setVisible(true);
     }
-}*/
+}

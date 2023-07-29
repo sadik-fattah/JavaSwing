@@ -1,5 +1,7 @@
 import javax.swing.*;
-/*
+
+import static java.awt.event.InputEvent.CTRL_DOWN_MASK;
+
 public class JMenu_Shortcuts extends JFrame {
     private JMenuBar menuBar = new JMenuBar(); // Window menu bar
     private JMenuItem newItem, openItem, closeItem, saveItem, saveAsItem, printItem;
@@ -50,4 +52,4 @@ public class JMenu_Shortcuts extends JFrame {
         window.setBounds(30, 30, 300, 300);
         window.setVisible(true);
     }
-}*/
+}
