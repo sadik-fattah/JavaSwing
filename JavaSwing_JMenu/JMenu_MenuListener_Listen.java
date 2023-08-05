@@ -9,30 +9,27 @@ public class JMenu_MenuListener_Listen {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JMenuBar menuBar = new JMenuBar();
 
-
         JMenu fileMenu = new JMenu("File");
         fileMenu.setMnemonic(KeyEvent.VK_F);
         menuBar.add(fileMenu);
 
-        fileMenu.addMenuListener(new MenuListener() {
+      fileMenu.addMenuListener(new MenuListener() {
+          @Override
+          public void menuSelected(MenuEvent menuEvent) {
+              System.out.println("menuSelected");
+          }
 
-            public void menuSelected(MenuEvent e) {
-                System.out.println("menuSelected");
-            }
+          @Override
+          public void menuDeselected(MenuEvent menuEvent) {
+              System.out.println("menuDeselected");
+          }
 
-            public void menuDeselected(MenuEvent e) {
-                System.out.println("menuDeselected");
+          @Override
+          public void menuCanceled(MenuEvent menuEvent) {
+              System.out.println("menuCanceled");
+          }
+      });
 
-            }
-
-            public void menuCanceled(MenuEvent e) {
-                System.out.println("menuCanceled");
-
-            }
-        });
-
-        JMenuItem newMenuItem = new JMenuItem("New");
-        fileMenu.add(newMenuItem);
 
         frame.setJMenuBar(menuBar);
         frame.setSize(350, 250);

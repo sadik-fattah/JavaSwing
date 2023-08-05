@@ -5,24 +5,23 @@ public class JMenu_AddSparator {
     public static void main(final String args[]) {
         JFrame f = new JFrame("MenuSample Separator");
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         JMenuBar menuBar = new JMenuBar();
 
-        JMenu fileMenu = new JMenu("File");
-        fileMenu.setMnemonic(KeyEvent.VK_F);
-        menuBar.add(fileMenu);
+        JMenu filemenu = new JMenu("file");
+        filemenu.setMnemonic(KeyEvent.VK_F);
+        menuBar.add(filemenu);
+
+        JMenuItem newmenuitem = new JMenuItem("new",KeyEvent.VK_N);
+        filemenu.add(newmenuitem);
+
+        filemenu.addSeparator();
+
+        JMenuItem savemenuitem =  new JMenuItem("save" , KeyEvent.VK_S);
+        filemenu.add(savemenuitem);
 
 
-        JMenuItem newMenuItem = new JMenuItem("New", KeyEvent.VK_N);
-        fileMenu.add(newMenuItem);
-
-
-        fileMenu.addSeparator();
-
-
-        JMenuItem saveMenuItem = new JMenuItem("Save", KeyEvent.VK_S);
-        fileMenu.add(saveMenuItem);
-
-        f.setJMenuBar(menuBar);
+f.setJMenuBar(menuBar);
         f.setSize(350, 250);
         f.setVisible(true);
     }

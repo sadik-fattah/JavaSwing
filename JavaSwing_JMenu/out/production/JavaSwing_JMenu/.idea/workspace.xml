@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2eeff62a-b782-4a20-9774-b3f7b6bbf0c1" name="Changes" comment="" />
+    <list default="true" id="2eeff62a-b782-4a20-9774-b3f7b6bbf0c1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JMenu_Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/JMenu_Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaSwing_JMenu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaSwing_JMenu/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,9 +44,37 @@
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="JMenu_AddSparator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JMenu_AddSparator" />
+  <component name="RunManager" selected="Application.JMenu_Window">
+    <configuration name="JMenu_Action_Objects" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JMenu_Action_Objects" />
+      <module name="JavaSwing_JMenu" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JMenu_Shortcuts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JMenu_Shortcuts" />
+      <module name="JavaSwing_JMenu" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JMenu_Submenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JMenu_Submenu" />
+      <module name="JavaSwing_JMenu" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JMenu_Window" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JMenu_Window" />
+      <module name="JavaSwing_JMenu" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JMenu_how_Look" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JMenu_how_Look" />
       <module name="JavaSwing_JMenu" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -49,7 +82,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JMenu_AddSparator" />
+        <item itemvalue="Application.JMenu_Window" />
+        <item itemvalue="Application.JMenu_Action_Objects" />
+        <item itemvalue="Application.JMenu_how_Look" />
+        <item itemvalue="Application.JMenu_Shortcuts" />
+        <item itemvalue="Application.JMenu_Submenu" />
       </list>
     </recent_temporary>
   </component>

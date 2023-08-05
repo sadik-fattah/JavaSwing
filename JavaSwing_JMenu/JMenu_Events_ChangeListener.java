@@ -5,34 +5,29 @@ import java.awt.event.KeyEvent;
 
 public class JMenu_Events_ChangeListener {
     public static void main(final String args[]) {
-        JFrame frame = new JFrame("MenuSample Example");
+        JFrame frame = new JFrame("changelistener Example");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JMenuBar menuBar = new JMenuBar();
 
+JMenu filemenu =new JMenu("file");
+filemenu.setMnemonic(KeyEvent.VK_F);
+menuBar.add(filemenu);
 
-        JMenu fileMenu = new JMenu("File");
-        fileMenu.setMnemonic(KeyEvent.VK_F);
-        menuBar.add(fileMenu);
+filemenu.addChangeListener(new ChangeListener() {
+    public void stateChanged(ChangeEvent changeEvent) {
+        System.out.println("File new is  changed");
+    }
+});
+JMenuItem newjmenuItem = new JMenuItem("new");
+filemenu.add(newjmenuItem);
 
-        fileMenu.addChangeListener(new ChangeListener() {
 
-            public void stateChanged(ChangeEvent e) {
-                System.out.println("File Menu Changed");
+newjmenuItem.addChangeListener(new ChangeListener() {
 
-            }
-        });
-
-        JMenuItem newMenuItem = new JMenuItem("New");
-        fileMenu.add(newMenuItem);
-
-        newMenuItem.addChangeListener(new ChangeListener() {
-
-            public void stateChanged(ChangeEvent e) {
-                System.out.println("new menu item changed");
-
-            }
-        });
-
+    public void stateChanged(ChangeEvent changeEvent) {
+        System.out.println("new menu item is change");
+    }
+});
         frame.setJMenuBar(menuBar);
         frame.setSize(350, 250);
         frame.setVisible(true);
