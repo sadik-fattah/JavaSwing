@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2eeff62a-b782-4a20-9774-b3f7b6bbf0c1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/at.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JMenu_Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/JMenu_Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JMenu_Action_Objects.java" beforeDir="false" afterPath="$PROJECT_DIR$/JMenu_Action_Objects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JMenu_Layout_Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/JMenu_Layout_Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JMenu_Submenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/JMenu_Submenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JMenu_how_Look.java" beforeDir="false" afterPath="$PROJECT_DIR$/JMenu_how_Look.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JavaSwing_JMenu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaSwing_JMenu/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,15 +39,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true"
   }
-}</component>
-  <component name="RunManager" selected="Application.JMenu_Window">
+}]]></component>
+  <component name="RunManager" selected="Application.JMenu_how_Look">
     <configuration name="JMenu_Action_Objects" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JMenu_Action_Objects" />
       <module name="JavaSwing_JMenu" />
@@ -52,8 +56,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JMenu_Shortcuts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JMenu_Shortcuts" />
+    <configuration name="JMenu_Layout_Menu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JMenu_Layout_Menu" />
+      <module name="JavaSwing_JMenu" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JMenu_MenuListener_Listen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JMenu_MenuListener_Listen" />
       <module name="JavaSwing_JMenu" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -61,13 +72,6 @@
     </configuration>
     <configuration name="JMenu_Submenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JMenu_Submenu" />
-      <module name="JavaSwing_JMenu" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JMenu_Window" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JMenu_Window" />
       <module name="JavaSwing_JMenu" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -82,11 +86,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JMenu_Window" />
-        <item itemvalue="Application.JMenu_Action_Objects" />
         <item itemvalue="Application.JMenu_how_Look" />
-        <item itemvalue="Application.JMenu_Shortcuts" />
+        <item itemvalue="Application.JMenu_Layout_Menu" />
         <item itemvalue="Application.JMenu_Submenu" />
+        <item itemvalue="Application.JMenu_Action_Objects" />
+        <item itemvalue="Application.JMenu_MenuListener_Listen" />
       </list>
     </recent_temporary>
   </component>
@@ -100,5 +104,8 @@
       <updated>1690449327241</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

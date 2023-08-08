@@ -1,46 +1,41 @@
 import javax.swing.*;
 import java.awt.event.KeyEvent;
 
+
 public class JMenu_Submenu {
     public static void main(final String args[]) {
-        JFrame frame = new JFrame("MenuSample Example");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JFrame f = new JFrame("MenuSample Example");
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JMenuBar menuBar = new JMenuBar();
 
-        // File Menu, F - Mnemonic
-        JMenu fileMenu = new JMenu("File");
-        fileMenu.setMnemonic(KeyEvent.VK_F);
-        menuBar.add(fileMenu);
+JMenu fileMenu = new JMenu("file");
+fileMenu.setMnemonic(KeyEvent.VK_F);
+menuBar.add(fileMenu);
 
-        // File->New, N - Mnemonic
-        JMenuItem newMenuItem = new JMenuItem("New", KeyEvent.VK_N);
-        fileMenu.add(newMenuItem);
+JMenuItem menuItemnew = new JMenuItem("New",KeyEvent.VK_N);
+fileMenu.add(menuItemnew);
 
-        // Edit->Options Submenu, O - Mnemonic, at.gif - Icon Image File
-        JMenu findOptionsMenu = new JMenu("Options");
-        Icon atIcon = new ImageIcon("at.gif");
-        findOptionsMenu.setIcon(atIcon);
-        findOptionsMenu.setMnemonic(KeyEvent.VK_O);
-        fileMenu.add(findOptionsMenu);
+JMenu findOptionMenu = new JMenu("Options");
+Icon aticon = new ImageIcon("at.jpg");
+findOptionMenu.setIcon(aticon);
+findOptionMenu.setMnemonic(KeyEvent.VK_O);
+fileMenu.add(findOptionMenu);
 
-        // ButtonGroup for radio buttons
-        ButtonGroup directionGroup = new ButtonGroup();
+ButtonGroup derictionGroup = new ButtonGroup();
 
-        // Edit->Options->Forward, F - Mnemonic, in group
-        JRadioButtonMenuItem forwardMenuItem = new JRadioButtonMenuItem("Forward", true);
-        forwardMenuItem.setMnemonic(KeyEvent.VK_F);
-        findOptionsMenu.add(forwardMenuItem);
-        directionGroup.add(forwardMenuItem);
 
-        // Edit->Options->Backward, B - Mnemonic, in group
-        JRadioButtonMenuItem backwardMenuItem = new JRadioButtonMenuItem("Backward");
+JRadioButtonMenuItem fowardMenuItem = new JRadioButtonMenuItem("Foward",true);
+fowardMenuItem.setMnemonic(KeyEvent.VK_F);
+findOptionMenu.add(fowardMenuItem);
+derictionGroup.add(fowardMenuItem);
+
+        JRadioButtonMenuItem backwardMenuItem = new JRadioButtonMenuItem("Backward",true);
         backwardMenuItem.setMnemonic(KeyEvent.VK_B);
-        findOptionsMenu.add(backwardMenuItem);
-        directionGroup.add(backwardMenuItem);
+        findOptionMenu.add(backwardMenuItem);
+        derictionGroup.add(backwardMenuItem);
 
-
-        frame.setJMenuBar(menuBar);
-        frame.setSize(350, 250);
-        frame.setVisible(true);
+        f.setJMenuBar(menuBar);
+        f.setSize(350, 250);
+        f.setVisible(true);
     }
 }

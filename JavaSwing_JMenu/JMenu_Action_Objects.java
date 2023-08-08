@@ -2,21 +2,20 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
-
-class ShowAction extends AbstractAction {
-    Component parentComponent;
-
-    public ShowAction(Component parentComponent) {
+class ShowAction extends AbstractAction{
+    Component componentparent;
+    public ShowAction(Component componentparent){
         super("About");
-        putValue(Action.MNEMONIC_KEY, new Integer(KeyEvent.VK_A));
-        this.parentComponent = parentComponent;
+        putValue(Action.MNEMONIC_KEY,new Integer(KeyEvent.VK_A));
+        this.componentparent = componentparent;
     }
-
     public void actionPerformed(ActionEvent actionEvent) {
         Runnable runnable = new Runnable() {
             public void run() {
-                JOptionPane.showMessageDialog(parentComponent, "About Swing", "About Box V2.0",
-                        JOptionPane.INFORMATION_MESSAGE);
+              JOptionPane.showMessageDialog(componentparent,
+                      "guercifzone for java swing",
+                      "javaSwing tutariel",
+                      JOptionPane.INFORMATION_MESSAGE);
             }
         };
         EventQueue.invokeLater(runnable);
@@ -24,21 +23,20 @@ class ShowAction extends AbstractAction {
 }
 public class JMenu_Action_Objects {
     public static void main(final String args[]) {
-        JFrame frame = new JFrame("MenuSample Example");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JFrame f = new JFrame("munu  example ");
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JMenuBar menuBar = new JMenuBar();
 
-        // File Menu, F - Mnemonic
-        JMenu fileMenu = new JMenu("File");
-        fileMenu.setMnemonic(KeyEvent.VK_F);
-        menuBar.add(fileMenu);
+        JMenu filemenu = new JMenu("File");
+        filemenu.setMnemonic(KeyEvent.VK_F);
+        menuBar.add(filemenu);
 
-        // File->New, N - Mnemonic
-        JMenuItem newMenuItem = new JMenuItem(new ShowAction(frame));
-        fileMenu.add(newMenuItem);
+        JMenuItem menuItemnew = new JMenuItem(new ShowAction(f));
+        filemenu.add(menuItemnew);
 
-        frame.setJMenuBar(menuBar);
-        frame.setSize(350, 250);
-        frame.setVisible(true);
+        f.setJMenuBar(menuBar);
+        f.setSize(350,250);
+        f.setVisible(true);
+
     }
 }
