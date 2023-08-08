@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49309c17-592c-4510-9e26-6ae53bda774e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSwing_Tutariel_Advanced_Component/JScrollBarEventsChangeListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSwing_Tutariel_Advanced_Component/JScrollBarEventsChangeListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSwing_Tutariel_Advanced_Component/JScrollBar_Adjustment_Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSwing_Tutariel_Advanced_Component/JScrollBar_Adjustment_Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSwing_Tutariel_Advanced_Component/JScrollBar_Always_Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSwing_Tutariel_Advanced_Component/JScrollBar_Always_Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSwing_Tutariel_Advanced_Component/JScrollBar_Bounded_Range.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSwing_Tutariel_Advanced_Component/JScrollBar_Bounded_Range.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSwing_JMenu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSwing_JMenu/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +37,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
   <component name="ProjectId" id="2Sbk59EGJGZGHfMLMl8f24cSCvd" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -45,8 +48,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Edu.Yaml.Migrate": "true",
+    "android.gradle.sync.needed": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/hp/Desktop/JavaSwing/JavaSwing_JToolBar",
     "show.inlinked.gradle.project.popup": "false"
   }
 }]]></component>

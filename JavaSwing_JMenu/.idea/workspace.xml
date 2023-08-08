@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2eeff62a-b782-4a20-9774-b3f7b6bbf0c1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/at.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JMenu_Action_Objects.java" beforeDir="false" afterPath="$PROJECT_DIR$/JMenu_Action_Objects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JMenu_Layout_Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/JMenu_Layout_Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JMenu_Submenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/JMenu_Submenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JMenu_how_Look.java" beforeDir="false" afterPath="$PROJECT_DIR$/JMenu_how_Look.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaSwing_JMenu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaSwing_JMenu/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2eeff62a-b782-4a20-9774-b3f7b6bbf0c1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,15 +31,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.JMenu_how_Look">
     <configuration name="JMenu_Action_Objects" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JMenu_Action_Objects" />
