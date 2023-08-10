@@ -13,36 +13,33 @@ public class JToolBar_Various_Buttons  extends  JFrame{
         toolbar.setRollover(true);
         ImageIcon icon = new ImageIcon(new ImageIcon("save.png").getImage().getScaledInstance(20,30,Image.SCALE_DEFAULT));
 
-
-        JButton c1 = new JButton(icon);
-
+JButton c1 = new JButton(icon);
+c1.setText(null);
+c1.setMargin(new Insets(0,0,0,0));
 c1.addActionListener(new ActionListener() {
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-        System.out.println("btn click c1");
+        System.out.println("btn c1 clicked");
     }
 });
-        c1.setText(null);
-        c1.setMargin(new Insets(0,0,0,0));
-        toolbar.add(c1);
+      toolbar.add(c1);
 
-        JToggleButton c2 = new JToggleButton(icon);
+      JToggleButton c2 = new JToggleButton(icon);
+        c2.setText(null);
+        c2.setMargin(new Insets(0,0,0,0));
         c2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                System.out.println("btn  click c2");
+                System.out.println("btn c2 clicked");
             }
         });
-        c2.setText(null);
-        c2.setMargin(new Insets(0,0,0,0));
         toolbar.add(c2);
 
         JComboBox c3 = new JComboBox(new String[]{"A","B","C"});
-        c3.setMaximumSize(c3.getMinimumSize());
+        c3.setMaximumSize(c3.getMaximumSize());
         toolbar.add(c3);
 
         toolbar.addSeparator();
-     
         add(toolbar);
     }
     public static void main(String[] argv) throws Exception {
