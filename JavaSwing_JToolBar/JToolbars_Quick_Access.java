@@ -10,13 +10,13 @@ public class JToolbars_Quick_Access {
         JMenu file = new JMenu("File");
         menubar.add(file);
         f.setJMenuBar(menubar);
-
         JToolBar toolbar = new JToolBar();
         ImageIcon icon = new ImageIcon(new ImageIcon("save.png").getImage().getScaledInstance(20,30,Image.SCALE_DEFAULT));
         JButton exit = new JButton(icon);
         toolbar.add(exit);
         exit.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent event) {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
                 System.exit(0);
             }
         });

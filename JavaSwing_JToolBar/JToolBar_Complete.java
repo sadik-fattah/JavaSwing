@@ -5,24 +5,22 @@ public class JToolBar_Complete {
     public static void main(final String args[]) {
         JFrame frame = new JFrame("JToolBar Example");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+JToolBar toolBar = new JToolBar();
+toolBar.setRollover(true);
 
-        JToolBar toolbar = new JToolBar();
-        toolbar.setRollover(true);
+JButton button = new JButton("Button1");
+toolBar.add(button);
+toolBar.addSeparator();
+
+toolBar.add(new JButton("Button2"));
+toolBar.add(new JComboBox(new String[]{"A","B","C","D"}));
+Container contentPane = frame.getContentPane();
+contentPane.add(toolBar,BorderLayout.NORTH);
+JTextArea textArea = new JTextArea();
+JScrollPane scrollPane = new JScrollPane(textArea);
+contentPane.add(scrollPane,BorderLayout.CENTER);
 
 
-        JButton button = new JButton("button");
-        toolbar.add(button);
-        toolbar.addSeparator();
-
-        toolbar.add(new JButton("button 2"));
-
-        toolbar.add(new JComboBox(new String[]{"A","B","C"}));
-
-        Container contentPane = frame.getContentPane();
-        contentPane.add(toolbar, BorderLayout.NORTH);
-        JTextArea textArea = new JTextArea();
-        JScrollPane pane = new JScrollPane(textArea);
-        contentPane.add(pane, BorderLayout.CENTER);
         frame.setSize(350, 150);
         frame.setVisible(true);
     }
