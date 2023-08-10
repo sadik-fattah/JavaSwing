@@ -12,7 +12,7 @@ public class JToolbars_Quick_Access {
         f.setJMenuBar(menubar);
 
         JToolBar toolbar = new JToolBar();
-        ImageIcon icon = new ImageIcon("exit.png");
+        ImageIcon icon = new ImageIcon(new ImageIcon("save.png").getImage().getScaledInstance(20,30,Image.SCALE_DEFAULT));
         JButton exit = new JButton(icon);
         toolbar.add(exit);
         exit.addActionListener(new ActionListener() {

@@ -1,61 +1,104 @@
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class JToolBar_Image extends JFrame {
-        Container frameContainer;
-
-        JToolBar toolBar = new JToolBar();
-
-        String[] iconFiles = { "new.gif", "open.gif", "save.gif", "cut.gif", "copy.gif", "paste.gif" };
-
-        String[] buttonLabels = { "New", "Open", "Save", "Cut", "Copy", "Paste" };
-
-        ImageIcon[] icons = new ImageIcon[iconFiles.length];
-
-        JButton[] buttons = new JButton[buttonLabels.length];
-
-        JMenuBar menuBar = new JMenuBar();
-
-        JMenu fileMenu = new JMenu("File");
-
-        JMenuItem fileExit = new JMenuItem("Exit");
+public class JToolBar_Image  {
 
         public JToolBar_Image() {
-            fileMenu.add(fileExit);
+            ImageIcon saveicon = new ImageIcon(new ImageIcon("save.png").getImage().getScaledInstance(20,20,Image.SCALE_DEFAULT));
+            ImageIcon pasticon = new ImageIcon(new ImageIcon("paste.png").getImage().getScaledInstance(20,20,Image.SCALE_DEFAULT));
+            ImageIcon openicon = new ImageIcon(new ImageIcon("open.png").getImage().getScaledInstance(20,20,Image.SCALE_DEFAULT));
+            ImageIcon newicon = new ImageIcon(new ImageIcon("new.png").getImage().getScaledInstance(20,20,Image.SCALE_DEFAULT));
+            ImageIcon copyicon = new ImageIcon(new ImageIcon("copy.png").getImage().getScaledInstance(20,20,Image.SCALE_DEFAULT));
+            ImageIcon cuticon = new ImageIcon(new ImageIcon("cut.png").getImage().getScaledInstance(20,20,Image.SCALE_DEFAULT));
+
+            Action openAction = new AbstractAction("Open" ,openicon) {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent) {
+                    System.out.println("Open File");
+                }
+            };
+            Action saveAction = new AbstractAction("save" ,saveicon) {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent) {
+                    System.out.println("Save File");
+                }
+            };
+            Action newAction = new AbstractAction("new" ,newicon) {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent) {
+                    System.out.println("New File");
+                }
+            };
+            Action copyAction = new AbstractAction("copy" ,copyicon) {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent) {
+                    System.out.println("Copy File");
+                }
+            };
+            Action cutAction = new AbstractAction("cut" ,cuticon) {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent) {
+                    System.out.println("Cut File");
+                }
+            };
+            Action pastAction = new AbstractAction("past" ,pasticon) {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent) {
+                    System.out.println("past File");
+                }
+            };
+
+            JMenuItem openMenuItem = new JMenuItem(openAction);
+            JMenuItem saveMenuItem = new JMenuItem(saveAction);
+            JMenuItem newMenuItem = new JMenuItem(newAction);
+            JMenuItem copyMenuItem = new JMenuItem(copyAction);
+            JMenuItem cutMenuItem = new JMenuItem(cutAction);
+            JMenuItem pastMenuItem = new JMenuItem(pastAction);
+
+            JMenuBar menuBar = new JMenuBar();
+            JMenu fileMenu = new JMenu("File");
+
+            fileMenu.add(openMenuItem);
+            fileMenu.add(saveMenuItem);
+            fileMenu.add(newMenuItem);
+            fileMenu.add(copyMenuItem);
+            fileMenu.add(cutMenuItem);
+            fileMenu.add(pastMenuItem);
+
             menuBar.add(fileMenu);
-            setJMenuBar(menuBar);
 
-            frameContainer = getContentPane();
-            frameContainer.setLayout(new BorderLayout());
-            for (int i = 0; i < buttonLabels.length; ++i) {
-                icons[i] = new ImageIcon(iconFiles[i]);
-                buttons[i] = new JButton(icons[i]);
-                buttons[i].setToolTipText(buttonLabels[i]);
-                if (i == 3)
-                    toolBar.addSeparator();
-                toolBar.add(buttons[i]);
-            }
-            frameContainer.add("North", toolBar);
+            JToolBar toolBar = new JToolBar();
+            toolBar.add(Box.createHorizontalGlue());
+            toolBar.setBorder(new LineBorder(Color.LIGHT_GRAY, 1));
+            toolBar.add(newAction);
+            toolBar.add(openAction);
+            toolBar.add(saveAction);
+            toolBar.add(copyAction);
+            toolBar.add(cutAction);
+            toolBar.add(pastAction);
 
-            this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            fileExit.addActionListener(new MenuItemHandler());
+            JFrame frame = new JFrame("Toolbar and Menu Test");
+            frame.setJMenuBar(menuBar);
+            frame.add(toolBar, BorderLayout.PAGE_START);
+            frame.pack();
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setLocationByPlatform(true);
+            frame.setVisible(true);
 
-            setSize(500, 500);
-            setVisible(true);
         }
 
         public static void main(String[] args) {
-            JToolBar_Image app = new JToolBar_Image();
+          SwingUtilities.invokeLater(new Runnable() {
+              @Override
+              public void run() {
+                  new JToolBar_Image();
+              }
+          });
         }
 
-        public class MenuItemHandler implements ActionListener {
-            public void actionPerformed(ActionEvent e) {
-                String cmd = e.getActionCommand();
-                if (cmd.equals("Exit"))
-                    System.exit(0);
-            }
-        }
+
     }
 
