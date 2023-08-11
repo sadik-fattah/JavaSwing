@@ -5,7 +5,7 @@ public class JTable_Control_Selection {
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JTable table = new JTable(4, 5); // 4 rows & 5 columns
+        JTable table = new JTable(4, 5);
 
         table.setRowSelectionAllowed(false);
         table.setColumnSelectionAllowed(false);

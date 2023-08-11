@@ -2,7 +2,6 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -10,11 +9,7 @@ import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-/**
- * SimpleTableSelectionDemo is just like SimpleTableDemo, except that it detects
- * selections, printing information about the current selection to standard
- * output.
- */
+
 public class JTable_Model_Selected extends JPanel {
     private boolean DEBUG = false;
     private boolean ALLOW_COLUMN_SELECTION = false;
@@ -22,32 +17,25 @@ public class JTable_Model_Selected extends JPanel {
 
     public JTable_Model_Selected() {
         super(new GridLayout(1, 0));
-
-        final String[] columnNames = { "First Name", "Last Name", "Sport",
-                "# of Years", "Vegetarian" };
+        final String[] columnNames = { "First & Last Name", "Programing language", "Experience", "# of Years", "passed" };
 
         final Object[][] data = {
-                { "Mary", "Campione", "Snowboarding", new Integer(5),
-                        new Boolean(false) },
-                { "Alison", "Huml", "Rowing", new Integer(3), new Boolean(true) },
-                { "Kathy", "Walrath", "Knitting", new Integer(2), new Boolean(false) },
-                { "Sharon", "Zakhour", "Speed reading", new Integer(20),
-                        new Boolean(true) },
+                { "Mary", "Campione", "Snowboarding", new Integer(5), new Boolean(false) },
+                { "Alison", "Huml", "Rowing", new Integer(30), new Boolean(true) },
+                { "Kathy", "Walrath", "Knitting", new Integer(9), new Boolean(false) },
+                { "Sharon", "Zakhour", "Speed reading", new Integer(20), new Boolean(true) },
                 { "Philip", "Milne", "Pool", new Integer(10), new Boolean(false) } };
 
         final JTable table = new JTable(data, columnNames);
         table.setPreferredScrollableViewportSize(new Dimension(500, 70));
         table.setFillsViewportHeight(true);
-
         table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-        if (ALLOW_ROW_SELECTION) { // true by default
+        if (ALLOW_ROW_SELECTION) {
             ListSelectionModel rowSM = table.getSelectionModel();
             rowSM.addListSelectionListener(new ListSelectionListener() {
                 public void valueChanged(ListSelectionEvent e) {
-                    // Ignore extra messages.
                     if (e.getValueIsAdjusting())
                         return;
-
                     ListSelectionModel lsm = (ListSelectionModel) e.getSource();
                     if (lsm.isSelectionEmpty()) {
                         System.out.println("No rows are selected.");
@@ -63,19 +51,14 @@ public class JTable_Model_Selected extends JPanel {
 
         if (ALLOW_COLUMN_SELECTION) { // false by default
             if (ALLOW_ROW_SELECTION) {
-                // We allow both row and column selection, which
-                // implies that we *really* want to allow individual
-                // cell selection.
                 table.setCellSelectionEnabled(true);
             }
             table.setColumnSelectionAllowed(true);
             ListSelectionModel colSM = table.getColumnModel().getSelectionModel();
             colSM.addListSelectionListener(new ListSelectionListener() {
                 public void valueChanged(ListSelectionEvent e) {
-                    // Ignore extra messages.
                     if (e.getValueIsAdjusting())
                         return;
-
                     ListSelectionModel lsm = (ListSelectionModel) e.getSource();
                     if (lsm.isSelectionEmpty()) {
                         System.out.println("No columns are selected.");
@@ -94,11 +77,7 @@ public class JTable_Model_Selected extends JPanel {
                 }
             });
         }
-
-        // Create the scroll pane and add the table to it.
         JScrollPane scrollPane = new JScrollPane(table);
-
-        // Add the scroll pane to this panel.
         add(scrollPane);
     }
 
@@ -118,28 +97,17 @@ public class JTable_Model_Selected extends JPanel {
         System.out.println("--------------------------");
     }
 
-    /**
-     * Create the GUI and show it. For thread safety, this method should be
-     * invoked from the event-dispatching thread.
-     */
     private static void createAndShowGUI() {
-        // Create and set up the window.
-        JFrame frame = new JFrame("SimpleTableSelectionDemo");
+        JFrame frame = new JFrame("Simple Table Selection ");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        // Create and set up the content pane.
         JTable_Model_Selected newContentPane = new JTable_Model_Selected();
-        newContentPane.setOpaque(true); // content panes must be opaque
+        newContentPane.setOpaque(true);
         frame.setContentPane(newContentPane);
-
-        // Display the window.
+        frame.setSize(600,300);
         frame.pack();
         frame.setVisible(true);
     }
-
     public static void main(String[] args) {
-        // Schedule a job for the event-dispatching thread:
-        // creating and showing this application's GUI.
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 createAndShowGUI();
