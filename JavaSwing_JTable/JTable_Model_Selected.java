@@ -17,84 +17,86 @@ public class JTable_Model_Selected extends JPanel {
 
     public JTable_Model_Selected() {
         super(new GridLayout(1, 0));
-        final String[] columnNames = { "First & Last Name", "Programing language", "Experience", "# of Years", "passed" };
+        final String[] columnNames = { "First & Last Name", "Programing language", "Idea", "# of Years", "passed" };
 
         final Object[][] data = {
-                { "Mary", "Campione", "Snowboarding", new Integer(5), new Boolean(false) },
-                { "Alison", "Huml", "Rowing", new Integer(30), new Boolean(true) },
-                { "Kathy", "Walrath", "Knitting", new Integer(9), new Boolean(false) },
-                { "Sharon", "Zakhour", "Speed reading", new Integer(20), new Boolean(true) },
-                { "Philip", "Milne", "Pool", new Integer(10), new Boolean(false) } };
+                { "Mary Campione", "java", "netbens", new Integer(5), new Boolean(false) },
+                { "Alison Huml", "csharp", "vsstudio", new Integer(30), new Boolean(true) },
+                { "Kathy Walrath", "basic", "vsStudio", new Integer(9), new Boolean(false) },
+                { "Sharon Zakhour", "php", "apache ", new Integer(20), new Boolean(true) },
+                { "Philip Milne", "c/c++", "vscode", new Integer(10), new Boolean(false) } };
+final JTable table = new JTable(data,columnNames);
+table.setPreferredScrollableViewportSize(new Dimension(500,70));
+table.setFillsViewportHeight(true);
+table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
-        final JTable table = new JTable(data, columnNames);
-        table.setPreferredScrollableViewportSize(new Dimension(500, 70));
-        table.setFillsViewportHeight(true);
-        table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-        if (ALLOW_ROW_SELECTION) {
-            ListSelectionModel rowSM = table.getSelectionModel();
-            rowSM.addListSelectionListener(new ListSelectionListener() {
-                public void valueChanged(ListSelectionEvent e) {
-                    if (e.getValueIsAdjusting())
-                        return;
-                    ListSelectionModel lsm = (ListSelectionModel) e.getSource();
-                    if (lsm.isSelectionEmpty()) {
-                        System.out.println("No rows are selected.");
-                    } else {
-                        int selectedRow = lsm.getMinSelectionIndex();
-                        System.out.println("Row " + selectedRow + " is now selected.");
-                    }
-                }
-            });
-        } else {
-            table.setRowSelectionAllowed(false);
-        }
-
-        if (ALLOW_COLUMN_SELECTION) { // false by default
-            if (ALLOW_ROW_SELECTION) {
-                table.setCellSelectionEnabled(true);
+if (ALLOW_ROW_SELECTION){
+    ListSelectionModel rowSh = table.getSelectionModel();
+    rowSh.addListSelectionListener(new ListSelectionListener() {
+        @Override
+        public void valueChanged(ListSelectionEvent e) {
+            if (e.getValueIsAdjusting())
+                return;
+            ListSelectionModel lsm = (ListSelectionModel) e.getSource();
+            if (lsm.isSelectionEmpty()){
+                System.out.println("no  rows as selected");
+            }else {
+                int selectedRows  = lsm.getMinSelectionIndex();
+                System.out.println("Rows" + selectedRows +"is now selected ");
             }
-            table.setColumnSelectionAllowed(true);
-            ListSelectionModel colSM = table.getColumnModel().getSelectionModel();
-            colSM.addListSelectionListener(new ListSelectionListener() {
-                public void valueChanged(ListSelectionEvent e) {
-                    if (e.getValueIsAdjusting())
-                        return;
-                    ListSelectionModel lsm = (ListSelectionModel) e.getSource();
-                    if (lsm.isSelectionEmpty()) {
-                        System.out.println("No columns are selected.");
-                    } else {
-                        int selectedCol = lsm.getMinSelectionIndex();
-                        System.out.println("Column " + selectedCol + " is now selected.");
-                    }
-                }
-            });
         }
+    });
+}else {
+    table.setRowSelectionAllowed(false);
+}
+if(ALLOW_COLUMN_SELECTION){
+    if (ALLOW_ROW_SELECTION){
+        table.setCellSelectionEnabled(true);
+    }
+    table.setColumnSelectionAllowed(true);
+    ListSelectionModel colsm = table.getColumnModel().getSelectionModel();
+    colsm.addListSelectionListener(new ListSelectionListener() {
+        @Override
+        public void valueChanged(ListSelectionEvent e) {
+            if (e.getValueIsAdjusting())
+                return;
+            ListSelectionModel lsm = (ListSelectionModel) e.getSource();
+            if (lsm.isSelectionEmpty()){
+                System.out.println("No column ar selected");
+            }else {
+                int selectCol = lsm.getMinSelectionIndex();
+                System.out.println("column" + selectCol + "is now selected");
+            }
+        }
+    });
+}
 
-        if (DEBUG) {
-            table.addMouseListener(new MouseAdapter() {
-                public void mouseClicked(MouseEvent e) {
-                    printDebugData(table);
-                }
-            });
+if (DEBUG){
+    table.addMouseListener(new MouseAdapter() {
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            printDebugData(table);
         }
-        JScrollPane scrollPane = new JScrollPane(table);
-        add(scrollPane);
+    });
+}
+JScrollPane scrollPane = new JScrollPane(table);
+add(scrollPane);
     }
 
     private void printDebugData(JTable table) {
-        int numRows = table.getRowCount();
-        int numCols = table.getColumnCount();
-        javax.swing.table.TableModel model = table.getModel();
+int numRows = table.getRowCount();
+int numCols = table.getColumnCount();
+javax.swing.table.TableModel model =table.getModel();
+System.out.println("Value of data:");
 
-        System.out.println("Value of data: ");
-        for (int i = 0; i < numRows; i++) {
-            System.out.print("    row " + i + ":");
-            for (int j = 0; j < numCols; j++) {
-                System.out.print("  " + model.getValueAt(i, j));
-            }
-            System.out.println();
-        }
-        System.out.println("--------------------------");
+for (int i =0;i<numRows;i++){
+    System.out.println(" row"+i+":");
+    for (int j = 0;j<numCols;j++){
+        System.out.println(" "+model.getValueAt(i,j));
+    }
+    System.out.println();
+}
+        System.out.println("-----------------------------------");
     }
 
     private static void createAndShowGUI() {

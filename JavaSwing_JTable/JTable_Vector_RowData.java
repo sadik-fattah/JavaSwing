@@ -7,25 +7,26 @@ public class JTable_Vector_RowData {
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        Vector<String> rowOne = new Vector<String>();
-        rowOne.addElement("Row1-Column1");
-        rowOne.addElement("Row1-Column2");
-        rowOne.addElement("Row1-Column3");
+       Vector<String> rowONE = new Vector<String>();
+       rowONE.addElement("Row1-Column1");// =>0
+        rowONE.addElement("Row1-Column2");//=>1
+        rowONE.addElement("Row1-Column3");//=>2
 
         Vector<String> rowTwo = new Vector<String>();
-        rowTwo.addElement("Row2-Column1");
-        rowTwo.addElement("Row2-Column2");
-        rowTwo.addElement("Row2-Column3");
+        rowTwo.addElement("Row2-Column1");// =>0
+        rowTwo.addElement("Row2-Column2");//=>1
+        rowTwo.addElement("Row2-Column3");//=>2
 
         Vector<Vector> rowData = new Vector<Vector>();
-        rowData.addElement(rowOne);
-        rowData.addElement(rowTwo);
+        rowData.addElement(rowONE);// =>0
+        rowData.addElement(rowTwo);//=>1
 
         Vector<String> columnNames = new Vector<String>();
-        columnNames.addElement("Column One");
-        columnNames.addElement("Column Two");
-        columnNames.addElement("Column Three");
-        JTable table = new JTable(rowData, columnNames);
+        columnNames.addElement("Column One");// =>0
+        columnNames.addElement("Column Two");//=>1
+        columnNames.addElement("Column Three");//=>2
+
+        JTable table = new JTable(rowData,columnNames);
 
         JScrollPane scrollPane = new JScrollPane(table);
         frame.add(scrollPane, BorderLayout.CENTER);
